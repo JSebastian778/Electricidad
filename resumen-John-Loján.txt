@@ -1,0 +1,96 @@
+UNIDAD 1: CIRCUITOS DE CORRIENTE DIRECTA
+SEMANA 1: FUNDAMENTOS DE LA ELECTRICIDAD
+Propósito y Encuadre
+Base del hardware: El estudio de los circuitos de corriente directa (DC) constituye la base fundamental sobre la que opera todo hardware de computación.
+Metodología de trabajo: Se rige bajo una secuencia de tres pasos: predicción teórica, simulación y contrastación experimental.
+La Carga Eléctrica y la Conducción
+Composición atómica: La materia se compone de átomos formados por protones (+), neutrones y electrones (-).
+Clasificación de materiales según sus electrones de valencia:
+Conductores: Poseen de 1 a 3 electrones de valencia débilmente ligados, generando abundancia de electrones libres (ej. cobre, aluminio, oro).
+Semiconductores: Poseen 4 electrones de valencia; presentan pocos electrones libres a temperatura ambiente (ej. silicio, germanio). Base de la microelectrónica.
+Aislantes: Poseen de 5 a 8 electrones de valencia fuertemente ligados; casi no presentan electrones libres (ej. vidrio, PVC, plástico).
+Magnitudes Eléctricas Básicas
+Corriente (I): Carga en movimiento por unidad de tiempo.
+Fórmula: I = Q / t
+Unidad: Amperio (A), donde 1 A = 1 C/s.
+Medición: Se mide conectando un amperímetro en serie en el circuito.
+Voltaje (V): Energía por unidad de carga entre dos puntos (diferencia de potencial).
+Fórmula: V = W / Q
+Unidad: Voltio (V), donde 1 V = 1 J/C.
+Medición: Se mide conectando un voltímetro en paralelo entre los dos puntos a evaluar.
+Resistencia (R): Oposición física al flujo de corriente eléctrica.
+Unidad: Ohmio (Ω), donde 1 Ω = 1 V/A.
+Conductancia (G): Inversa de la resistencia (G = 1 / R), medida en Siemens (S).
+El Circuito como Sistema
+Componentes clave:
+Fuente: Mantiene el voltaje y convierte otra forma de energía en energía eléctrica (baterías, puertos USB).
+Conductores: Proporcionan un camino de baja resistencia (cables, pistas de cobre).
+Carga: Transforma la energía eléctrica en luz, calor o procesamiento.
+Estados del circuito: Circuito cerrado (circula corriente), circuito abierto (I = 0) y cortocircuito (camino de resistencia nula, corriente críticamente alta).
+SEMANA 2: RESISTENCIA, LEY DE OHM, POTENCIA Y ENERGÍA ELÉCTRICA
+Factores que Determinan la Resistencia
+Geometría y material: La resistencia de un conductor uniforme se determina por:R = (ρ · L) / A
+ρ (rho): Resistividad del material (Ω · m).
+L: Longitud del conductor (m).
+A: Área de la sección transversal (m²).
+Efecto de la temperatura: En los metales, la resistencia aumenta linealmente con la temperatura: R = R0 [1 + α(T - T0)].
+Comportamiento de Fuentes
+Fuente de voltaje ideal: Mantiene una tensión constante (Vt = E) ante cualquier valor de carga (Ri = 0).
+Fuente de voltaje real: Posee una resistencia interna (Ri) en serie. Al exigirle más corriente, la tensión en sus terminales disminuye:Vt = E - (I · Ri)
+Ley de Ohm
+Aplica exclusivamente a elementos óhmicos donde la resistencia se mantiene constante ante variaciones de voltaje:V = I · R | I = V / R | R = V / I
+Coherencia de unidades en laboratorio: Usar voltios (V), miliamperios (mA) y kilohmios (kΩ) simplifica los cálculos (1 V / 1 kΩ = 1 mA).
+Potencia y Energía Eléctrica
+Potencia (P): Rapidez con la que se transforma o disipa la energía eléctrica (efecto Joule).P = V · I = I² · R = V² / R (medido en Vatios, W)
+Potencia nominal: Máxima potencia que un componente puede disipar sin destruirse. Criterio de diseño: seleccionar resistores que soporten el doble (2x) de la potencia calculada.
+Energía eléctrica (E): Potencia consumida acumulada en el tiempo:E = P · t (medido en Julios [J] o kilovatios-hora [kWh])
+SEMANA 3: CIRCUITOS EN SERIE, LVK Y DIVISOR DE TENSIÓN
+Caracterización del Circuito en Serie
+Corriente única: Los elementos van conectados en fila compartiendo nodos de exactamente 2 conexiones. La corriente que circula por cada componente es exactamente la misma.
+Interrupción total: Si se abre cualquier elemento del lazo, la corriente en todo el circuito cae a cero (I = 0).
+Resistencia Equivalente (Req)
+La resistencia total en serie es igual a la suma directa de las resistencias individuales:Req = R1 + R2 + R3 + ... + Rn
+Propiedad: Req siempre será mayor que la mayor de las resistencias del circuito. Al añadir más resistencias en serie, la corriente total entregada por la fuente disminuye.
+Ley de Voltajes de Kirchhoff (LVK)
+Basada en el principio de conservación de la energía.
+Enunciado: En cualquier lazo o trayectoria cerrada de un circuito, la suma algebraica de todas las diferencias de potencial es igual a cero:Σ V = 0 => Σ V(subidas) = Σ V(caídas)
+Regla del Divisor de Tensión
+Permite determinar el voltaje en una resistencia específica dentro de una rama serie sin necesidad de calcular previamente la corriente:Vx = E · (Rx / Req)
+Propiedades y limitaciones:
+Genera un voltaje de salida (Vout) proporcional al voltaje de entrada (Vin).
+Solo es exacto en vacío (sin carga). Al conectar una resistencia de carga (RL) en paralelo con R2, la tensión cae si RL no es significativamente mayor que R2 (RL ≥ 10 · R2).
+SEMANA 4: CIRCUITOS EN PARALELO, LCK Y DIVISOR DE CORRIENTE
+Caracterización del Circuito en Paralelo
+Voltaje común: Dos o más elementos están en paralelo si se encuentran conectados entre los mismos dos nodos. Todos los componentes experimentan la misma diferencia de potencial (V1 = V2 = V3 = V).
+Independencia de ramas: Si una rama en paralelo se abre, las demás ramas continúan funcionando con normalidad.
+Ley de Corrientes de Kirchhoff (LCK)
+Basada en el principio de conservación de la carga eléctrica.
+Enunciado: La suma algebraica de las corrientes que entran a un nodo es igual a la suma de las corrientes que salen de él:Σ I(entrantes) = Σ I(salientes) => Σ Ik = 0
+Resistencia Equivalente en Paralelo (Req)
+Se obtiene sumando las recíprocas de cada resistencia (suma de conductancias):(1 / Req) = (1 / R1) + (1 / R2) + (1 / R3) + ... + (1 / Rn)
+Propiedad fundamental: Req siempre es menor que la menor de las resistencias del arreglo en paralelo.
+Fórmula directa para dos resistencias en paralelo:Req = (R1 · R2) / (R1 + R2)
+Regla del Divisor de Corriente
+Reparte la corriente total que ingresa a un bloque en paralelo entre sus ramas. A menor resistencia en la rama, mayor corriente circulará por ella.
+Fórmulas para dos ramas en paralelo:
+I1 = I(total) · [R2 / (R1 + R2)]
+I2 = I(total) · [R1 / (R1 + R2)]
+SEMANA 5: REDES EN SERIE-PARALELO (CIRCUITOS MIXTOS)
+Identificación y Análisis Topológico
+La combinación de arreglos en serie y paralelo constituye la estructura de la gran mayoría de los circuitos reales.
+Criterio fundamental: Las conexiones serie o paralelo se identifican analizando estrictamente los nodos, nunca la posición física o la estética del esquema gráfico.
+Estrategia de Reducción por Etapas (Camino de Ida)
+Etiquetar nodos: Identificar y marcar cada unión de 3 o más conductores.
+Seleccionar pares válidos: Empezar por el bloque en serie o en paralelo más alejado de la fuente de alimentación.
+Sustitución sucesiva: Reemplazar los componentes combinados por su resistencia equivalente (Rs o Rp) y redibujar la red simplificada.
+Obtención de Req global: Repetir el proceso iterativamente hasta obtener una sola resistencia equivalente total.
+Corriente de la fuente: Calcular la corriente principal que entrega la fuente mediante la Ley de Ohm:I(fuente) = Vs / Req
+Estrategia de Reconstrucción (Camino de Vuelta)
+Recorrer el camino inverso paso a paso reemplazando los equivalentes por sus componentes originales para calcular todas las variables internas (V, I, P):
+Si la etapa reconstruida es Serie: Se conoce la corriente (I) que la atraviesa => Se calculan los voltajes individuales con V = I · R.
+Si la etapa reconstruida es Paralelo: Se conoce el voltaje (V) entre sus nodos => Se calculan las corrientes de rama con I = V / R.
+Ninguna resolución teórica se considera terminada sin auditar los resultados mediante tres comprobaciones obligatorias:
+LVK: La suma de caídas en cada lazo cerrado debe dar exactamente el voltaje aplicado por la fuente.
+LCK: La suma de corrientes salientes en cada nodo debe ser igual a la corriente que entra.
+Balance de potencias: La potencia total suministrada por la fuente debe ser idéntica a la suma de las potencias disipadas por todas las resistencias individuales:P(fuente) = Vs · I(fuente) = Σ P(resistencias)
+
